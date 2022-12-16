@@ -1,0 +1,115 @@
+Spring :
+IOS / Spring Container :- Spring helpls in the creatin of loosely coupled applications
+beacause of dependency injection.
+
+
+In spring objects define their dependencies and do not worry about how they will these dependencies, It is the responsibility of spring to provide the required dependencies for creating objects.
+For example: Suppose we have an object Employee and it has a dependency on object Address. We would define a bean corresponding to employee that will define its dependency on object Address.
+
+When spring tries to create an employee object, it will see that Employee has a dependency on Address. So, it will first create the address object(dependent Object) and then INJECT it into the Employee object.
+
+IOC (Inversion of Control) and DI (Dependency Injection)
+are used interchangeably. IOC is achieved throlugh DI.
+  DI is the process of providing the dependencies and IOC is the end result of DI. By DI the responsibility of creating objects are shifted from our application code to the spring Container / IOC Container
+  This phenomenon is called IOC.
+Dependency Injection can be done by constructor or Setter of Field injection
+
+realtime:
+---------
+It means gibing the control of creatin and instatiatin the bean/ object to the Spring/ Ioc Container and theonly work the developrer does is configuring the beans in the spring XML file.
+
+consider thei scenario:
+------------
+classs Employee{
+    private int id ;
+    private Strin name;
+    private Address address;
+    Employee() {
+        id = 10; name " name";
+        address = new Adress(); //  tight coupling
+                                // good design
+    }
+}
+
+Constructor injection:
+--------------------
+
+Employee(Address addr) {
+    this.address = addr;       // loosely  coupling
+                               // good design
+}
+  in this way the address class values can be set indepndentl usin either setter / constructor / field injection.
+
+Developement steps
+-------------------
+go to sts  --- Spring ToolSuite 4
+
+step 1 : create a java project 
+step 2 : create folder named lib
+step 3 : copy and past all jar files from downloads to lib folder
+
+------------------------------------------------
+date 11/Dec/ 2022
+------------------------------------------------
+
+
+Develop SpringBoot application
+******************************
+    Spring Core 
+    Spring MVC
+    Spring REST  --- Web Service
+                    Json (javaScript Object Notation)
+    
+HttpMethods
+ Select all      - Get
+ Select a particular record  - Get and pass parameter
+ Insert a record       Post
+ Update a record      - Put 
+
+
+ Code range
+ -----------
+ 100 - 199    informational
+ 200 - 299    Successful
+ 300 - 399    Redirection
+ 400 - 499    Client Error
+ 500 - 599    Server Error
+
+ Developement steps for SpringBoot App: Employee Management System
+ ---------------------------------------------------------
+ 1. Create a REST API for the employee Management System
+    1. Create SpringBoot App Project using Spring initializer
+    2. Setup application.properties for
+        a. Detabase connectivity 
+        b. Set Hibernate using as ORM
+        c. Set JPA specification for Hibernate
+    3.Run and Test connectivity
+
+2. REST Client should be able to
+    1. Get a list of Employees ----------------- /api/employees
+    2. Get a single Employee by Id  ------------ /api/employees{id}
+    3 Add new Employee --------------------- /api/employees{id}
+    4. Update an Employee ----------------- /api/employees{id}
+    5. Delete an Employee  -----------------/api/employees{id}
+
+3. Application Architecture
+---------------------------
+******************
+*
+*something missing
+*
+*
+
+<dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.13</version>
+</dependency>
+<dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-joda</artifactId>
+</dependency>
+<dependency>
+            <groupId>org.jadira.usertype</groupId>
+            <artifact>
+</dependency>
